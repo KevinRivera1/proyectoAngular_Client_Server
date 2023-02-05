@@ -14,3 +14,4 @@ export * from './categories/read-category.dto';
 export * from './categories/update-category.dto';
 
 
+export * from './pagination/pagination.dto'
