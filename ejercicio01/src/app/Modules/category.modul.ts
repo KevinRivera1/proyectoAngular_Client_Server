@@ -1,5 +1,7 @@
 export interface CategoryModel {
     id: number;
-    name: string;
-    image: string;
+    name?: Name;
+    image?: string;
 }
+
+export type Name = "Electronics" | "Others" | "Change title" | "Clothes" | "Shoes" | "story" | "post";
