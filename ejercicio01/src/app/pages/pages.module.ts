@@ -1,13 +1,14 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { CatalogueComponent } from './catalogue/catalogue.component';
-import { ProductComponent } from './product/product.component';
-import {NgxPaginationModule} from 'ngx-pagination';
+import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { CatalogueComponent } from './catalogue/catalogue.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ProductComponent } from './product/product.component';
 @NgModule({
   declarations: [DashboardComponent, CatalogueComponent, ProductComponent],
   exports: [DashboardComponent, CatalogueComponent, ProductComponent],
-  imports: [CommonModule,NgxPaginationModule,RouterModule],
+  imports: [CommonModule,NgxPaginationModule,RouterModule,ReactiveFormsModule],
 })
 export class PagesModule { }
