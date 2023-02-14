@@ -1,12 +1,12 @@
 import { CategoryModel } from "./category.modul";
 
 export interface ProductModel {
-    id: number;
-    title: string;
-    price: number;
+    id:          number;
+    title:       string;
+    price:       number;
     description: string;
-    category: CategoryModel;
-    images: string[];
+    images:      string[];
+    category:    CategoryModel;
 }
 
 export interface CreateProductDto extends Omit<ProductModel, 'id' | 'category'> {
