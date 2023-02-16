@@ -27,9 +27,14 @@ export class ProductHttpService {
     return this.httpClient.post<ProductModel>(this.API_URL, product);
   }
   //*Actualizar Producto
-  update(product: UpdateProductDto, id: ProductModel['id']): Observable<ProductModel> {
+  /* update(product: UpdateProductDto, id: ProductModel['id']): Observable<ProductModel> {
     const url = `${this.API_URL}/${id}`;
     return this.httpClient.put<ProductModel>(url, product);
+  } */
+
+  updateProduct(id: number, updatedProductData: ProductModel): Observable<ProductModel> {
+    const url = `${this.API_URL}/${id}`;
+    return this.httpClient.put<ProductModel>(url, updatedProductData);
   }
   //*Eliminar Producto
   destroy(id: ProductModel['id']): Observable<any> {
